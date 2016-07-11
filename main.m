@@ -14,7 +14,7 @@ g = 9.8;
 I = [I_xx 0 0; 0 I_yy 0; 0 0 I_zz];
 k_velocity_feedback = 3.2;
 
-state_initial = [0 0 3 0 0 0 0 0 0 0 0 0];
+state_initial = [0 0 0 0 0 0 0 0 0 0 0 0];
 
 %------------------------------------------------------
 %       PID parameter
