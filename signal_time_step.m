@@ -2,7 +2,7 @@ function [ sig_ref ] = signal_time_step( u )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 t = u;
-angle = 40;
+angle = 20;
 
 if t < 5
     phi_ref = angle/180*pi;

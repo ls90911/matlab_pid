@@ -14,7 +14,9 @@ g = 9.8;
 I = [I_xx 0 0; 0 I_yy 0; 0 0 I_zz];
 k_velocity_feedback = 3.2;
 
-state_initial = [0 0 1 0 0 0 0 0 0 0 0 0];
+state_initial = [1 1 3 0.6322 -0.6244 0 0 0 0 0 0 0];
+
+%state_initial = [1 1 3 0 0 0 0 0 0 0 0 0];
 
 %------------------------------------------------------
 %       PID parameter
@@ -32,7 +34,7 @@ state_initial = [0 0 1 0 0 0 0 0 0 0 0 0];
           con_D_psi = 0.02;
           
           con_P_z = 5;
-          con_I_z = 0.5;
+          con_I_z = 0.2;
           con_D_z = 4;
 %------------------------------------------------------
 
@@ -44,5 +46,13 @@ matrix_force_2_omega = inv(matrix_omega_2_force);
 
 sim('pid_simulation');
 
+figure(5)
+plot3(yout(:,1),yout(:,2),yout(:,3),'b','LineWidth',2);
+grid on;
+hold on;
+plot3(ref(:,1),ref(:,2),ref(:,3),'--r','LineWidth',2);
+xlabel('x(m)');
+ylabel('y(m)');
+zlabel('z(m)');
 
 temp = 0;
