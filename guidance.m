@@ -51,11 +51,6 @@ end
 
 
 
-
-
-
-
-
 function [alpha] = vector_angle(vector1,vector2)
 % this function is used to calculate the angle between two vectors
 
