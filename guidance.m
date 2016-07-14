@@ -30,12 +30,11 @@ if flag == 1
     dy_ref = -radius*omega*cos(gamma-omega*t);
     ddx_ref = -radius*omega^2*cos(gamma-omega*t);
     ddy_ref = -radius*omega^2*sin(gamma-omega*t);
-    
 elseif flag == 0
     x_ref = center(1) + radius*cos(gamma+omega*t);
     y_ref = center(2) + radius*sin(gamma+omega*t);
     dx_ref = -radius*omega*sin(gamma+omega*t);
-    dy_ref = radius*gamma*cos(gamma+omega*t);
+    dy_ref = radius*omega*cos(gamma+omega*t);
     ddx_ref = -radius*omega^2*cos(gamma+omega*t);
     ddy_ref = -radius*omega^2*sin(gamma+omega*t);
 else
